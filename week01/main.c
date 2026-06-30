@@ -17,9 +17,8 @@ if (config_packet == NULL) {
     }
     *high_threshold = (int16_t)((config_packet[1] << 8) | config_packet[0]);
     // HỌC VIÊN KẾT THÚC VIẾT CODE
-    }
 }
-
+}
 // TASK 2: COMPILER & VOLATILE
 
 int16_t read_temperature_reg(void *hw_sensor_reg) {
