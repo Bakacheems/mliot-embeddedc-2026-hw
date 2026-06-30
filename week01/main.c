@@ -34,9 +34,21 @@ if (hw_sensor_reg == NULL) {
 
 void control_output(uint8_t *control_reg, uint8_t fan_enable, uint8_t alarm_enable) {
     // HỌC VIÊN BẮT ĐẦU VIẾT COaDE TỪ ĐÂY
-
-
-
+if (control_reg == NULL){
+    return ;
+}
+if (fan_enable == 1){
+    *control_reg |= (1<<0);
+}
+else if (fan_enable == 0){
+    *control_reg &= ~(1<<0);
+}
+if (alarm_enable == 1){
+    *control_reg |= (1<<1);
+}
+else if (alarm_enable == 0){
+    *control_reg &= ~(1<<1);
+}
 
     // HỌC VIÊN KẾT THÚC VIẾT CODE
 }
