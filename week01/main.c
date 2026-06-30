@@ -17,6 +17,7 @@ if (config_packet == NULL) {
     }
     *high_threshold = (int16_t)((config_packet[1] << 8) | config_packet[0]);
     // HỌC VIÊN KẾT THÚC VIẾT CODE
+    }
 }
 
 // TASK 2: COMPILER & VOLATILE
@@ -40,7 +41,6 @@ void control_output(uint8_t *control_reg, uint8_t fan_enable, uint8_t alarm_enab
 
     // HỌC VIÊN KẾT THÚC VIẾT CODE
 }
-
 // HÀM MAIN KIỂM TRA (Học viên giữ nguyên để chạy thử nghiệm, chỉ thay đổi input nếu cần)
 
 int main() {
